@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dpd.ro/v1/shipment/info
+    body:
+      encoding: UTF-8
+      string: '{"shipmentIds":[80147286562],"userName":"<DPD_USERNAME>","password":"<DPD_PASSWORD>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.dpd.ro
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Jan 2020 13:24:34 GMT
+      Server:
+      - Apache/2.4.25 (Win64) OpenSSL/1.0.2k
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '4007'
+      Set-Cookie:
+      - SERVERID_8084=server124-8084-81; path=/
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"shipments":[{"id":"80147286562","sender":{"clientId":<DPD_CLIENT_ID>,"clientName":"LUNET
+        STUDIO SRL","contactName":"STEFAN GUGUREL","address":{"countryId":642,"siteId":642279132,"siteType":"or.","siteName":"BUCURESTI","postCode":"011813","streetId":642076636,"streetType":"str.","streetName":"PARIS","streetNo":"9","floorNo":"3","x":26.087824,"y":44.454414,"fullAddressString":"or.
+        BUCURESTI [011813], str. PARIS Nr. 9 et. 3","siteAddressString":"or. BUCURESTI
+        [011813]","localAddressString":"str. PARIS Nr. 9 et. 3"},"email":"hello@luneteyewear.com","privatePerson":false,"phones":[{"number":"0723763332"}],"dropoffOfficeId":0},"recipient":{"clientName":"LUNET
+        STUDIO SRL","address":{"countryId":642,"siteId":642279132,"siteType":"or.","siteName":"BUCURESTI","postCode":"010661","streetId":642075756,"streetType":"bld.","streetName":"LASCAR
+        CATARGIU","streetNo":"15A12","blockNo":"15A","x":26.094288,"y":44.447853,"fullAddressString":"or.
+        BUCURESTI [010661], bld. LASCAR CATARGIU Nr. 15A12 bl. 15A","siteAddressString":"or.
+        BUCURESTI [010661]","localAddressString":"bld. LASCAR CATARGIU Nr. 15A12 bl.
+        15A"},"privatePerson":true,"phones":[{"number":"0728547184"}]},"service":{"pickupDate":"2020-01-16","serviceId":<DPD_SERVICE_ID>,"additionalServices":{"returns":{}},"deferredDays":0,"saturdayDelivery":true,"autoAdjustPickupDate":false},"content":{"parcelsCount":1,"declaredWeight":0.5,"calculationWeight":0.5,"contents":"GLASSES","documents":false,"palletized":false,"parcels":[{"id":"80147286562","seqNo":1,"declaredSize":{"width":0,"height":0,"depth":0},"measuredSize":{"width":0,"height":0,"depth":0},"calculationSize":{"width":0,"height":0,"depth":0},"declaredWeight":0.5,"calculationWeight":0.5,"externalCarrierParcelNumbers":[]}],"pendingParcels":false,"package":"BOX"},"payment":{"courierServicePayer":"SENDER"},"ref1":"LNT_ORD_ID","price":{"amount":12.17,"vat":2.31,"total":14.48,"details":{"netAmount":{"amount":7.85,"vatPercent":0.19},"addressPickupSurcharge":{"amount":1.59,"percent":0.0,"vatPercent":0.19},"addressDeliverySurcharge":{"amount":2.38,"percent":0.0,"vatPercent":0.19},"fixedDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"dropOffDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"pickUpDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"additionalDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"fuelSurcharge":{"amount":0.35,"percent":3.0,"vatPercent":0.19},"nonStandardDeliveryDateSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"islandSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"optionsBeforePaymentSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"codPremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"insurancePremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"voucherDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19}},"amountLocal":12.17,"vatLocal":2.31,"totalLocal":14.48,"currencyLocal":"RON","detailsLocal":{"netAmount":{"amount":7.85,"vatPercent":0.19},"addressPickupSurcharge":{"amount":1.59,"percent":0.0,"vatPercent":0.19},"addressDeliverySurcharge":{"amount":2.38,"percent":0.0,"vatPercent":0.19},"fixedDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"dropOffDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"pickUpDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"additionalDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"fuelSurcharge":{"amount":0.35,"percent":3.0,"vatPercent":0.19},"nonStandardDeliveryDateSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"islandSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"optionsBeforePaymentSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"codPremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"insurancePremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"voucherDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19}},"currencyExchangeRateUnit":1,"currencyExchangeRate":1.0},"delivery":{"deadline":"2020-01-17T00:00:00+0200"},"primaryShipment":{},"pendingShipment":false}]}'
+    http_version: 
+  recorded_at: Thu, 16 Jan 2020 13:24:35 GMT
+- request:
+    method: post
+    uri: https://api.dpd.ro/v1/shipment/cancel
+    body:
+      encoding: UTF-8
+      string: '{"shipmentId":"80147286562","comment":"Customer request.","userName":"<DPD_USERNAME>","password":"<DPD_PASSWORD>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.dpd.ro
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Jan 2020 13:24:35 GMT
+      Server:
+      - Apache/2.4.25 (Win64) OpenSSL/1.0.2k
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2'
+      Set-Cookie:
+      - SERVERID_8084=server123-8084-81; path=/
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 16 Jan 2020 13:24:35 GMT
+recorded_with: VCR 5.0.0

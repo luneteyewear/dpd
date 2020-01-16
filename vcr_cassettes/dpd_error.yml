@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dpd.ro/v1/shipment/info
+    body:
+      encoding: UTF-8
+      string: '{"shipmentIds":["wrong"],"userName":"<DPD_USERNAME>","password":"<DPD_PASSWORD>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.dpd.ro
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Jan 2020 13:43:12 GMT
+      Server:
+      - Apache/2.4.25 (Win64) OpenSSL/1.0.2k
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '60'
+      Set-Cookie:
+      - SERVERID_8084=server123-8084-81; path=/
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"error":{"context":"","message":"Barcode wrong not found"}}'
+    http_version: 
+  recorded_at: Thu, 16 Jan 2020 13:43:13 GMT
+recorded_with: VCR 5.0.0

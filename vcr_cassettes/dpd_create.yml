@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dpd.ro/v1/shipment
+    body:
+      encoding: UTF-8
+      string: '{"service":{"serviceId":"<DPD_SERVICE_ID>","autoAdjustPickupDate":true,"saturdayDelivery":true},"payment":{"courierServicePayer":"SENDER"},"ref1":"LNT_ORD_ID","sender":{"clientId":"<DPD_CLIENT_ID>"},"recipient":{"privatePerson":true,"contactName":"Lunet
+        Studio SRL","clientName":"Lunet Studio SRL","phone1":{"number":"+40728547184"},"address":{"countryId":642,"siteName":"Bucharest","addressNote":"Bld.
+        Lascar Catargiu 15A, 12, Sector 1, 010661 Bucharest","addressLine1":"Bld.
+        Lascar Catargiu 15A, 12, Sector 1, 0","addressLine2":"010661 Bucharest","postCode":"010661"}},"content":{"parcelsCount":1,"totalWeight":0.5,"contents":"GLASSES","package":"BOX"},"userName":"<DPD_USERNAME>","password":"<DPD_PASSWORD>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.dpd.ro
+      User-Agent:
+      - http.rb/4.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Jan 2020 13:14:57 GMT
+      Server:
+      - Apache/2.4.25 (Win64) OpenSSL/1.0.2k
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2217'
+      Set-Cookie:
+      - SERVERID_8084=server123-8084-81; path=/
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"80147286562","parcels":[{"id":"80147286562","seqNo":1}],"pickupDate":"2020-01-16","price":{"amount":12.17,"vat":2.31,"total":14.48,"details":{"netAmount":{"amount":7.85,"vatPercent":0.19},"addressPickupSurcharge":{"amount":1.59,"percent":0.0,"vatPercent":0.19},"addressDeliverySurcharge":{"amount":2.38,"percent":0.0,"vatPercent":0.19},"fixedDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"dropOffDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"pickUpDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"additionalDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"fuelSurcharge":{"amount":0.35,"percent":3.0,"vatPercent":0.19},"nonStandardDeliveryDateSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"islandSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"optionsBeforePaymentSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"codPremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"insurancePremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"voucherDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19}},"amountLocal":12.17,"vatLocal":2.31,"totalLocal":14.48,"currencyLocal":"RON","detailsLocal":{"netAmount":{"amount":7.85,"vatPercent":0.19},"addressPickupSurcharge":{"amount":1.59,"percent":0.0,"vatPercent":0.19},"addressDeliverySurcharge":{"amount":2.38,"percent":0.0,"vatPercent":0.19},"fixedDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"dropOffDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"pickUpDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"additionalDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"fuelSurcharge":{"amount":0.35,"percent":3.0,"vatPercent":0.19},"nonStandardDeliveryDateSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"islandSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"optionsBeforePaymentSurcharge":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"codPremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"insurancePremium":{"amount":0.0,"percent":0.0,"vatPercent":0.19},"voucherDiscount":{"amount":0.0,"percent":0.0,"vatPercent":0.19}},"currencyExchangeRateUnit":1,"currencyExchangeRate":1.0},"deliveryDeadline":"2020-01-17T19:00:00+0200"}'
+    http_version:
+  recorded_at: Thu, 16 Jan 2020 13:14:57 GMT
+recorded_with: VCR 5.0.0
