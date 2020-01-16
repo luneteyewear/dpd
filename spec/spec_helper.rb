@@ -13,7 +13,7 @@ VCR.configure do |config|
   config.hook_into :webmock
 
   %w[DPD_USERNAME DPD_PASSWORD DPD_SERVICE_ID DPD_CLIENT_ID].each do |pkey|
-    ENV[pkey] ||= 'secret'
+    ENV[pkey] ||= '"secret"'
     config.filter_sensitive_data("<#{pkey}>") { ENV[pkey] }
   end
 end
