@@ -6,7 +6,7 @@ SimpleCov.start do
   add_group 'Lib', 'lib'
   add_group 'Tests', 'spec'
 end
-SimpleCov.minimum_coverage 90
+SimpleCov.minimum_coverage 85
 
 VCR.configure do |config|
   config.cassette_library_dir = 'vcr_cassettes'
